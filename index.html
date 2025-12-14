@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مدرستي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+html, body { height: 100%; }
+body { font-family: 'Tajawal','Cairo','Segoe UI',sans-serif; margin: 0; background: #f7f7fb; color: #111; }
+.header { background: linear-gradient(135deg, #0ea5e9, #22c55e); color: #fff; padding: 24px; }
+.container { max-width: 1024px; margin: 0 auto; padding: 20px; }
+.title { font-size: 28px; font-weight: 700; }
+.subtitle { font-size: 16px; opacity: .9; }
+.section { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; margin-top: 20px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fafafa; transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+.card a { text-decoration: none; color: #0f3d56; font-weight: 700; display: block; }
+.divider { height: 2px; background: linear-gradient(to left, #0ea5e9, #22c55e); opacity: .7; margin: 12px 0 16px; }
+.videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+figure { margin: 0; }
+figcaption { margin-top: 8px; font-size: 15px; color: #134e4a; }
+video { width: 100%; border-radius: 12px; background: #000; }
+.placeholder { display:flex; align-items:center; justify-content:center; height:180px; border:1px dashed #f59e0b; border-radius:12px; background:#fff7ed; color:#78350f; font-weight:700; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.btn { display: inline-block; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+.btn.primary { background: #0ea5e9; color: #fff; }
+.btn.secondary { background: #22c55e; color: #fff; }
+.footer { text-align: center; font-size: 14px; color: #556; margin: 22px 0; }
+details { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; background: #fff; }
+summary { cursor: pointer; font-weight: 700; color: #0f3d56; }
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="title">مدرستي</div>
+      <div class="subtitle">واجهة رئيسية تضم قائمة المواد، مع قسم تكنولوجيا بالفيديوهات والملخصات</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="subjects">
+      <h2>قائمة المواد</h2>
+      <div class="divider"></div>
+      <div class="grid">
+        <div class="card">
+          <a href="#technology" aria-label="الذهاب إلى قسم تكنولوجيا">تكنولوجيا</a>
+          <div style="font-size:13px; color:#556;">ملخصات فيديو + ملخص المنهج</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <h2>تكنولوجيا</h2>
+      <div class="divider"></div>
+      <div class="actions">
+        <a class="btn primary" href="#videos">مشاهدة ملخصات الفيديو</a>
+        <a class="btn secondary" href="sumbook_ar_grade8.html" target="_blank" rel="noopener">فتح ملخص المنهج</a>
+      </div>
+
+      <div style="margin-top:16px">
+        <details>
+          <summary>عرض الملخص داخل الصفحة</summary>
+          <div style="margin-top:10px; height: 70vh;">
+            <iframe title="ملخص المنهج" src="sumbook_ar_grade8.html" style="width:100%; height:100%; border:1px solid #e5e7eb; border-radius:12px;"></iframe>
+          </div>
+        </details>
+      </div>
+
+      <div style="margin-top:16px">
+        <details>
+          <summary>عرض الكتاب (PDF) داخل الصفحة</summary>
+          <div style="margin-top:10px; height: 70vh;">
+            <iframe title="الكتاب PDF" src="الفائز - تكنولوجيا المعلومات - 2 اعدادي - ترم 1 - ذاكرولي.pdf" style="width:100%; height:100%; border:1px solid #e5e7eb; border-radius:12px;"></iframe>
+          </div>
+        </details>
+      </div>
+
+      <h3 id="videos" style="margin-top:18px;">ملخصات الفيديو لكل درس</h3>
+      <div class="videos">
+        <figure>
+          <video controls preload="metadata" src="الأنظمة_الذكية_وتأثيرها_على_تغير_المناخ.mp4"></video>
+          <figcaption>الأنظمة الذكية وتأثيرها على تغير المناخ</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="التهديدات_السيبرانية_المتقدمة.mp4"></video>
+          <figcaption>التهديدات السيبرانية المتقدمة</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="بيانات_ضخمة_وذكاء_اصطناعي.mp4"></video>
+          <figcaption>البيانات الضخمة والذكاء الاصطناعي</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="ملخص_البيانات_الضخمة.mp4"></video>
+          <figcaption>ملخص البيانات الضخمة</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="مبادئ_تصميم_المواقع_الرائعة.mp4"></video>
+          <figcaption>مبادئ تصميم المواقع الرائعة</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="تنسيق_صفحات_الويب_بـ_CSS.mp4"></video>
+          <figcaption>تنسيق صفحات الويب بـ CSS</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" src="مشروعي_الرقمي_المدرسي.mp4"></video>
+          <figcaption>مشروعي الرقمي المدرسي</figcaption>
+        </figure>
+        <figure>
+          <div class="placeholder">أساسيات HTML — الفيديو سيُضاف هنا</div>
+          <figcaption>أساسيات HTML</figcaption>
+        </figure>
+      </div>
+
+      <div class="actions" style="margin-top:18px">
+        <a class="btn" href="الفائز - تكنولوجيا المعلومات - 2 اعدادي - ترم 1 - ذاكرولي.pdf" target="_blank" rel="noopener" style="background:#f59e0b; color:#fff;">تحميل مرجع إضافي (PDF)</a>
+      </div>
+    </section>
+
+    <div class="footer">© مدرستي</div>
+  </main>
+</body>
+</html>
